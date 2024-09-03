@@ -1,4 +1,7 @@
 <h1>Hey</h1>
-<%= render "test_partial" do |tp| %>
-  <%= tp.special_helper %>
+<%# render 'test_partial' %>
+<%= render 'other_partial' do |op| %>
+  <% op.something do %>
+    <%= op.special_helper %>
+  <% end %>
 <% end %>
